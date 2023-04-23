@@ -17,7 +17,7 @@ The onClick event handler for the li element in WrappedSingleListItem should be 
 
 
 # Q3. Please fix, optimize, and/or modify the component as much as you think is necessary.
-```
+```jsx
 import React, { useState, useEffect, memo } from 'react';
 import PropTypes from 'prop-types';
 
