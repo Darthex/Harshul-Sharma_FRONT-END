@@ -8,8 +8,11 @@ The WrappedListComponent is another memoized functional component that takes an 
 
 # Q2. What problems / warnings are there with code?
 There are a few problems/warnings with the code:
+
 The items prop is defined as an array of objects with a text property, but the PropTypes definition for items is incorrect. It should be PropTypes.arrayOf(PropTypes.shape({ text: PropTypes.string.isRequired })).
+
 The setSelectedIndex function in the WrappedListComponent is not used correctly. It should be just const [selectedIndex, setSelectedIndex] = useState(null);.
+
 The onClick event handler for the li element in WrappedSingleListItem should be a function that is called when the item is clicked, rather than being called immediately.
 
 
