@@ -30,7 +30,8 @@ import PropTypes from 'prop-types';
 // Single List Item
 const WrappedSingleListItem = ({index, isSelected, onClickHandler, text}) => {
     return (
-        <li style={{ backgroundColor: isSelected ? 'green' : 'red'}}
+        <li className='list-item'
+            style={{ backgroundColor: isSelected ? '#ce796b' : '#495867'}}
             onClick={() => onClickHandler(index)}>
             {text}
         </li>
@@ -59,7 +60,7 @@ const WrappedListComponent = ({items}) => {
     };
 
     return (
-        <ul style={{ textAlign: 'left' }}>
+        <ul style={{ textAlign: 'left' }} className='container'>
             {items.map((item, index) => (
                 <SingleListItem
                     key={index}
@@ -80,10 +81,42 @@ WrappedListComponent.propTypes = {
 };
 
 WrappedListComponent.defaultProps = {
-    items: [{text: "item1"}, {text: "item2"},{text: "item3"},{text: "item4"}]
+    items: [{text: "Item 1"}, {text: "Item 2"},{text: "Item 3"},{text: "Item 4"}]
 };
 
 const List = memo(WrappedListComponent);
 
 export default List;
+```
+
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#root {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #e7ad99;
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+.container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.list-item {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 300px;
+    border-radius: 10px;
+}
 ```
