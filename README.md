@@ -121,4 +121,4 @@ export default List;
 }
 ```
 
-![Front End Assignment Page](/)
+![Front End Assignment Page](/image_2023-04-23_230855021.png)
