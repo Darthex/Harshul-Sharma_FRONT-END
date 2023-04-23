@@ -1,1 +1,6 @@
 # Q1. Explain what the simple List component does.
+The List component is a React component that renders a list of items, where one item can be selected at a time. The list items are displayed as li elements with a background color that changes depending on whether the item is selected or not.
+
+The WrappedSingleListItem component is a memoized functional component that renders a single list item. It takes four props: index, isSelected, onClickHandler, and text. index is the index of the current item in the list, isSelected is a boolean value indicating whether the item is currently selected or not, onClickHandler is a function that is called when the item is clicked, and text is the text content of the item. The isSelected prop is used to determine the background color of the li element.
+
+The WrappedListComponent is another memoized functional component that takes an array of items as a prop. It uses the useState hook to keep track of the index of the currently selected item, which is initially set to null. The useEffect hook is used to reset the selected index to null whenever the items prop changes. The component also defines a handleClick function that updates the selected index when a list item is clicked. Finally, the component renders a list of SingleListItem components, passing the necessary props to each one.
