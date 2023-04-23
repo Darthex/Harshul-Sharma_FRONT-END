@@ -15,7 +15,7 @@ The setSelectedIndex function in the WrappedListComponent is not used correctly.
 
 The onClick event handler for the li element in WrappedSingleListItem should be a function that is called when the item is clicked, rather than being called immediately.
 
-There is no key element given to each child after using the map function.
+There is no key prop given to each child after using the map function.
 
 
 
